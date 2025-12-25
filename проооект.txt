@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вторая японо-китайская война 1937-1945</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(179, 14, 14, 1), rgba(179, 14, 14, 1)), 
+                        url('https://avatars.mds.yandex.net/i?id=c51a95afc1fa365c8222b1f47ce75ba_l-5315578-images-thumbs&n=13') 
+                        no-repeat center center/cover;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(179, 14, 14, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            min-height: 70px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://i.pinimg.com/originals/06/11/0e/06110ea1b4f030b2a7936f5264631c6d.jpg) no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .section {
+            background: #2d2d2d;
+            margin-bottom: 3rem;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .section h2 {
+            color: #ff6b6b;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .section h3 {
+            color: #ff8a8a;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.4rem;
+        }
+
+        .section h4 {
+            color: #ffa5a5;
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #8B0000;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #2d2d2d;
+            border: 4px solid #8B0000;
+            border-radius: 50%;
+            top: 15px;
+            right: -13px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -13px;
+        }
+
+        .timeline-content {
+            background: #3a3a3a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #8B0000;
+        }
+
+        /* Grid Systems */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: #3a3a3a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #8B0000;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        /* News Articles */
+        .news-article {
+            background: #3a3a3a;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #8B0000;
+        }
+
+        .news-article h3 {
+            color: #ff8a8a;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-article h3:before {
+            content: "•";
+            color: #FFD700;
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        .article-content {
+            margin-left: 1.5rem;
+        }
+
+        .article-content h4 {
+            color: #ffa5a5;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .article-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .article-content li:before {
+            content: "—";
+            color: #8B0000;
+            position: absolute;
+            left: -1rem;
+        }
+
+        /* Map Section */
+        .map-container {
+            background: #3a3a3a;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .battle-map {
+            width: 100%;
+            height: 500px;
+            background: #4a4a4a;
+            border: 2px solid #8B0000;
+            border-radius: 8px;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            height: 200px;
+            background: #4a4a4a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Tables */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        .comparison-table th {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #3a3a3a;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #4a4a4a;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ccc;
+            padding: 3rem 0 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #FFD700;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .right {
+                left: 0%;
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .article-content {
+                margin-left: 0;
+            }
+        }
+
+        /* Additional Styles */
+        .quote {
+            background: linear-gradient(135deg, #8B0000, #B22222);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #aaa;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+            border: 1px solid #8B0000;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #bbb;
+        }
+
+        /* Стили для карусели */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .carousel-slide {
+            display: none;
+            position: relative;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(139, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(139, 0, 0, 0.9);
+        }
+
+        .prev-btn {
+            left: 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .next-btn {
+            right: 0;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .indicator.active {
+            background: #FFD700;
+        }
+
+        .indicator:hover {
+            background: rgba(255,255,255,0.8);
+        }
+
+        /* Адаптивность карусели */
+        @media (max-width: 768px) {
+            .carousel-image {
+                height: 300px;
+            }
+            
+            .carousel-btn {
+                padding: 0.5rem;
+                font-size: 1.2rem;
+            }
+            
+            .carousel-caption {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+
+        /* Для карточек в фотогалерее */
+        .card-image {
+            margin: 10px 0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .card-image img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Вторая японо-китайская война</div>
+            <ul class="nav-links">
+                <li><a href="#introduction">Введение</a></li>
+                <li><a href="#news">Главное</a></li>
+                <li><a href="#geography">География</a></li>
+                <li><a href="#participants">Участники</a></li>
+                <li><a href="#weapons">Техника</a></li>
+                <li><a href="#crimes">Преступления</a></li>
+                <li><a href="#stories">Свидетельства</a></li>
+                <li><a href="#documents">Документы</a></li>
+                <li><a href="#consequences">Последствия</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Вторая японо-китайская война</h1>
+            <p>1937-1945: Самый кровопролитный конфликт в истории Азии</p>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <!-- Главная страница -->
+        <section id="introduction" class="section">
+            <h2>Введение</h2>
+            <p>Вторая японо-китайская война (1937-1945) стала одним из самых кровопролитных конфликтов XX века, унесшим жизни миллионов людей и оказавшим огромное влияние на развитие Азиатско-Тихоокеанского региона.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">миллионов жертв</span>
+                </div>
+                <div class="card">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">лет длительности</span>
+                </div>
+                <div class="card">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">крупных сражений</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Главное - РАСШИРЕННАЯ ВЕРСИЯ -->
+        <section id="news" class="section">
+            <h2>Главное</h2>
+            
+            <div class="news-article">
+                <h3>История конфликта</h3>
+                <div class="article-content">
+                    <p>Вторая японо-китайская война началась 7 июля 1937 года с инцидента на мосту Марко Поло и продолжалась до капитуляции Японии в 1945 году. Этот конфликт стал кульминацией десятилетий напряженности между двумя странами.</p>
+                    
+                    <h4>Ключевые аспекты:</h4>
+                    <ul>
+                        <li><strong>Истоки конфликта:</strong> Восходит к Первой японо-китайской войне 1894-1895 годов</li>
+                        <li><strong>Территориальные споры:</strong> Борьба за контроль над Маньчжурией и другими регионами</li>
+                        <li><strong>Экономические интересы:</strong> Японская потребность в ресурсах и рынках сбыта</li>
+                        <li><strong>Идеологическое противостояние:</strong> Японский милитаризм против китайского национализма</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>Важно:</strong> Конфликт часто рассматривается как часть Второй мировой войны на азиатском театре военных действий и оказал значительное влияние на послевоенное устройство региона.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Предпосылки войны</h3>
+                <div class="article-content">
+                    <p>Война стала результатом сложного переплетения исторических, экономических и политических факторов, накапливавшихся десятилетиями.</p>
+
+                    <h4>Основные предпосылки:</h4>
+                    <ul>
+                        <li><strong>Японский экспансионизм:</strong> Политика "сферы совместного процветания Великой Восточной Азии"</li>
+                        <li><strong>Слабость Китая:</strong> Внутренние конфликты между гоминьданом и коммунистами</li>
+                        <li><strong>Международная обстановка:</strong> Невмешательство западных держав в начальный период</li>
+                        <li><strong>Экономический кризис:</strong> Великая депрессия и поиск Японией новых рынков</li>
+                    </ul>
+
+                    <h4>Непосредственные причины:</h4>
+                    <ul>
+                        <li>Инцидент на мосту Марко Поло 7 июля 1937 года</li>
+                        <li>Японские войска в Маньчжурии по условиям Боксерского протокола</li>
+                        <li>Антияпонские настроения и бойкот японских товаров в Китае</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Хронология событий</h3>
+                <div class="article-content">
+                    <div class="timeline">
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h4>7 июля 1937</h4>
+                                <p>Инцидент на мосту Марко Поло - начало полномасштабной войны</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h4>Август-Ноябрь 1937</h4>
+                                <p>Битва за Шанхай - одно из самых кровопролитных сражений</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h4>Декабрь 1937</h4>
+                                <p>Падение Нанкина и начало Нанкинской резни</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h4>1938-1939</h4>
+                                <p>Битва за Ухань, сражение при Тайэрчжуане</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h4>1940</h4>
+                                <p>Операция "Сто рек", создание марионеточных режимов</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h4>1941-1944</h4>
+                                <p>Затяжная война, партизанские действия, вовлечение США</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h4>1945</h4>
+                                <p>Советское наступление в Маньчжурии, капитуляция Японии</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Основные боевые операции</h3>
+                <div class="article-content">
+                    <p>Война характеризовалась масштабными операциями, сочетавшими элементы классической и партизанской войны.</p>
+
+                    <h4>Ключевые операции японской армии:</h4>
+                    <ul>
+                        <li><strong>Шанхайская операция (1937):</strong> Штурм крупнейшего города Китая</li>
+                        <li><strong>Нанкинская операция (1937):</strong> Захват столицы Китая</li>
+                        <li><strong>Битва за Ухань (1938):</strong> Крупнейшее сражение войны</li>
+                        <li><strong>Операция "Ити-Го" (1944):</strong> Последнее крупное наступление</li>
+                    </ul>
+
+                    <h4>Значительные операции китайской армии:</h4>
+                    <ul>
+                        <li><strong>Оборона Шанхая (1937):</strong> Трехмесячное сопротивление</li>
+                        <li><strong>Сражение при Тайэрчжуане (1938):</strong> Первая крупная победа</li>
+                        <li><strong>Битва за Чанша (1939-1944):</strong> Четыре успешных обороны</li>
+                        <li><strong>Бирманская кампания (1942-1945):</strong> Международное сотрудничество</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <strong>Стратегический анализ:</strong> Японская армия превосходила в технике и организации, но китайские войска использовали преимущество территории и народной поддержки.
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <div class="quote">
+                    "Война оставила глубокие шрамы в коллективной памяти обеих наций и продолжает влиять на китайско-японские отношения по сей день."
+                </div>
+            </div>
+        </section>
+
+        <!-- География войны - ОБНОВЛЕННАЯ ВЕРСИЯ -->
+        <section id="geography" class="section">
+            <h2>Карты и география</h2>
+            <p class="section-intro">Война разворачивалась на огромной территории площадью более 6 миллионов квадратных километров. Географические особенности Китая — горы, реки, равнины и климатические зоны — оказывали решающее влияние на стратегию, тактику и ход военных действий.</p>
+            
+            <div class="map-container">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="https://assets.sutori.com/user-uploads/image/195054f9-78ce-4a8c-a9f9-6fefb33d90e8/2631538e77bcecfb8f8098922e400cef.jpeg" alt="оккупированные территории" class="carousel-image">
+                        <div class="carousel-caption">Карта оккупированных Японией территорий</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://avatars.mds.yandex.net/i?id=84ed6e420f968476618ce50d872b00e9_l-5249986-images-thumbs&n=13" alt="Баланс сил" class="carousel-image">
+                        <div class="carousel-caption">Баланс сил в Тихом океане</div>
+                    </div>
+                    
+                    <!-- Кнопки навигации -->
+                    <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+                    
+                    <!-- Индикаторы -->
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Природные барьеры и коридоры</h3>
+                    <p><strong>Главные речные системы:</strong></p>
+                    <ul>
+                        <li><strong>Янцзы</strong> — транспортная артерия и оборонительная линия</li>
+                        <li><strong>Хуанхэ</strong> — естественная преграда для наступления</li>
+                        <li><strong>Сицзян</strong> — путь в южные провинции</li>
+                    </ul>
+                    <p><strong>Горные цепи:</strong></p>
+                    <ul>
+                        <li>Тайханшань — база коммунистических партизан</li>
+                        <li>Циньлин — разделитель северного и южного Китая</li>
+                        <li>Юньнань-Гуйчжоуское нагорье — труднодоступный район</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Стратегические регионы</h3>
+                    <p><strong>Маньчжурия:</strong></p>
+                    <ul>
+                        <li>Промышленная база и источник ресурсов</li>
+                        <li>Плацдарм японской экспансии с 1931 года</li>
+                        <li>Квантунская армия — крупнейшая группировка</li>
+                    </ul>
+                    <p><strong>Северо-Китайская равнина:</strong></p>
+                    <ul>
+                        <li>Открытая местность, благоприятная для механизированных частей</li>
+                        <li>Ключевые города: Пекин, Тяньцзинь, Цзинань</li>
+                        <li>Железнодорожные узлы — цели японского наступления</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Экономическая география</h3>
+                    <p><strong>Промышленные центры:</strong></p>
+                    <ul>
+                        <li>Шанхай — финансовый и промышленный центр</li>
+                        <li>Ухань — металлургическая база</li>
+                        <li>Шэньян (Мукден) — военная промышленность</li>
+                    </ul>
+                    <p><strong>Сельскохозяйственные регионы:</strong></p>
+                    <ul>
+                        <li>Сычуаньская котловина — "житница" военного времени</li>
+                        <li>Долина Янцзы — рисовые поля и продовольственная база</li>
+                        <li>Северные равнины — производство пшеницы</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Климат и погодные условия</h3>
+                    <p><strong>Сезонное влияние на операции:</strong></p>
+                    <ul>
+                        <li><strong>Летние муссоны</strong> — размытие дорог, трудности снабжения</li>
+                        <li><strong>Зимние холода</strong> — проблемы с обогревом, замерзание рек</li>
+                        <li><strong>Весенние паводки</strong> — естественные преграды</li>
+                    </ul>
+                    <p><strong>Региональные особенности:</strong></p>
+                    <ul>
+                        <li>Север: континентальный климат, холодные зимы</li>
+                        <li>Центр: субтропики, влажное лето</li>
+                        <li>Юг: тропический климат, джунгли</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="news-article" style="margin-top: 2rem;">
+                <h3>География как союзник и враг</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Преимущества для Китая</h4>
+                            <ul>
+                                <li><strong>Огромная территория</strong> — возможность стратегического отступления</li>
+                                <li><strong>Горные районы</strong> — естественные крепости для партизан</li>
+                                <li><strong>Речные системы</strong> — транспорт без железных дорог</li>
+                                <li><strong>Климатическое разнообразие</strong> — трудности для непривычных японских войск</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4>Преимущества для Японии</h4>
+                            <ul>
+                                <li><strong>Контроль побережья</strong> — морское снабжение и блокада</li>
+                                <li><strong>Железные дороги</strong> — быстрая переброска войск на равнинах</li>
+                                <li><strong>Узловые города</strong> — контроль над транспортной сетью</li>
+                                <li><strong>Маньчжурская база</strong> — близкий тыл и ресурсы</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4>Ключевые географические факторы войны:</h4>
+                    <div class="highlight-box">
+                        <strong>1. Сычуань — неприступная крепость</strong><br>
+                        Горная провинция на западе стала временной столицей и главной тыловой базой. Её труднодоступность спасла правительство от полного разгрома.
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <strong>2. Янцзы — артерия и барьер</strong><br>
+                        Самая длинная река Азии служила и транспортным путём, и оборонительным рубежом. Переправы через Янцзы становились местами кровопролитных сражений.
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <strong>3. Железные дороги — цели и средства</strong><br>
+                        Японская стратегия строилась вокруг захвата железнодорожных узлов. Китайская — вокруг их разрушения для замедления врага.
+                    </div>
+                    
+                    <div class="quote" style="margin-top: 1.5rem;">
+                        "География Китая оказалась его самым верным союзником. Огромные пространства, горные хребты и полноводные реки поглотили японскую военную машины, превратив блицкриг в затяжную войну на истощение."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Участники конфликта -->
+        <section id="participants" class="section">
+            <h2>Участники конфликта</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Китайская сторона</h3>
+                    <p><strong>Национально-революционная армия</strong> - основные вооруженные силы Китайской Республики</p>
+                    <p><strong>Коммунистическая партия Китая</strong> - 8-я и Новая 4-я армии</p>
+                    <p><strong>Союзники:</strong> СССР, США, Великобритания</p>
+                </div>
+                <div class="card">
+                    <h3>Японская сторона</h3>
+                    <p><strong>Императорская армия Японии</strong> - основные сухопутные силы</p>
+                    <p><strong>Императорский флот Японии</strong> - военно-морские силы</p>
+                    <p><strong>Квантунская армия</strong> - группировка в Маньчжурии</p>
+                </div>
+                <div class="card">
+                    <h3>Другие участники</h3>
+                    <p><strong>Маньчжоу-го</strong> - японское марионеточное государство</p>
+                    <p><strong>Внутренняя Монголия</strong> - автономные формирования</p>
+                    <p><strong>Международные добровольцы</strong> - летчики, медицинские workers</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Военная техника и оружие -->
+        <section id="weapons" class="section">
+            <h2>Военная техника и оружие</h2>
+            
+            <h3>Армия и флот</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Японские вооружения</h4>
+                    <ul>
+                        <li>Тип 38 и Тип 99 винтовки</li>
+                        <li>Танки Тип 95 и Тип 97</li>
+                        <li>Истребители A6M Zero</li>
+                        <li>Бомбардировщики G3M и G4M</li>
+                        <li>Линкоры класса Yamato</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Китайские вооружения</h4>
+                    <ul>
+                        <li>Винтовки Hanyang 88</li>
+                        <li>Советские танки Т-26</li>
+                        <li>Американские истребители P-40</li>
+                        <li>Артиллерийские орудия различных типов</li>
+                        <li>Импровизированное вооружение</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Тактики и стратегии</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Японская стратегия</h4>
+                    <p>Блицкриг, захват ключевых городов и транспортных узлов, использование превосходства в авиации и флоте.</p>
+                </div>
+                <div class="card">
+                    <h4>Китайская стратегия</h4>
+                    <p>Тактика выжженной земли, партизанская война, затягивание конфликта, использование территории в качестве преимущества.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ВОЕННЫЕ ПРЕСТУПЛЕНИЯ - РАСШИРЕННАЯ ВЕРСИЯ -->
+        <section id="crimes" class="section">
+            <h2>Военные преступления и преступления против человечности</h2>
+            
+            <div class="quote">
+                "Память о этих событиях должна жить, чтобы будущие поколения не повторили ошибок прошлого"
+            </div>
+
+            <div class="news-article">
+                <h3>Нанкинская резня (Декабрь 1937 - Январь 1938)</h3>
+                <div class="article-content">
+                    <p>После падения Нанкина 13 декабря 1937 года японские войска устроили шестинедельную кампанию террора против гражданского населения и военнопленных.</p>
+
+                    <h4>Хронология событий:</h4>
+                    <ul>
+                        <li><strong>13 декабря 1937:</strong> Падение Нанкина, начало массовых казней</li>
+                        <li><strong>14-18 декабря:</strong> Систематические поиски и уничтожение бывших китайских солдат</li>
+                        <li><strong>19-28 декабря:</strong> Массовые изнасилования и грабежи по всему городу</li>
+                        <li><strong>Январь 1938:</strong> Продолжение насилия, создание "зоны безопасности"</li>
+                    </ul>
+
+                    <h4>Масштабы трагедии:</h4>
+                    <div class="grid-3">
+                        <div class="card">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">тысяч убитых гражданских</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">тысяч изнасилованных женщин</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">процентов уничтоженных зданий</span>
+                        </div>
+                    </div>
+
+                    <h4>Свидетельства очевидцев:</h4>
+                    <div class="highlight-box">
+                        <strong>Джон Рабе</strong> (немецкий бизнесмен): "Японские солдаты полностью вышли из-под контроля. Каждый день мы находили сотни тел на улицах..."
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Айрис Чан</strong> (историк): "Нанкинская резня стала символом японской жестокости в Китае и оставила глубокие шрамы в коллективной памяти китайского народа."
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Отряд 731 - Бактериологическая война</h3>
+                <div class="article-content">
+                    <p>Секретное подразделение Квантунской армии под руководством генерала Сиро Исии занималось разработкой биологического оружия и экспериментами над людьми.</p>
+
+                    <h4>Структура и деятельность:</h4>
+                    <ul>
+                        <li><strong>Местоположение:</strong> Пинфан, Маньчжурия (150 отсеков, 1500 сотрудников)</li>
+                        <li><strong>Период деятельности:</strong> 1936-1945 годы</li>
+                        <li><strong>Основные направления:</strong> Чума, холера, сибирская язва, ботулизм</li>
+                        <li><strong>Жертвы:</strong> Более 3,000 человек (китайцы, корейцы, русские)</li>
+                    </ul>
+
+                    <h4>Методы экспериментов:</h4>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Вивисекция</h4>
+                            <p>Хирургические операции на живых людях без анестезии для изучения действия болезней</p>
+                        </div>
+                        <div class="card">
+                            <h4>Заражение</h4>
+                            <p>Намеренное заражение пленных опасными заболеваниями для тестирования вакцин</p>
+                        </div>
+                        <div class="card">
+                            <h4>Термические тесты</h4>
+                            <p>Исследование воздействия экстремальных температур на человеческий организм</p>
+                        </div>
+                        <div class="card">
+                            <h4>Опыты с давлением</h4>
+                            <p>Помещение людей в барокамеры для изучения декомпрессии</p>
+                        </div>
+                    </div>
+
+                    <h4>Применение биологического оружия:</h4>
+                    <ul>
+                        <li>Заражение водных источников в китайских городах</li>
+                        <li>Сброс зараженных блох с самолетов</li>
+                        <li>Использование чумных бактерий против гражданского населения</li>
+                        <li>Оценка: до 400,000 жертв биологических атак</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Система "комфортных женщин"</h3>
+                <div class="article-content">
+                    <p>Организованная система сексуального рабства, созданная японской армией для "поддержания морального духа" солдат.</p>
+
+                    <h4>Масштабы системы:</h4>
+                    <div class="grid-3">
+                        <div class="card">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">тысяч женщин-жертв</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">стран происхождения</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">"станций утешения"</span>
+                        </div>
+                    </div>
+
+                    <h4>Механизм эксплуатации:</h4>
+                    <ul>
+                        <li><strong>Вербовка:</strong> Обман, похищение, продажа родителями</li>
+                        <li><strong>Национальности:</strong> Кореянки (80%), китаянки, филиппинки, голландки</li>
+                        <li><strong>Условия:</strong> 30-40 солдат в день на одну женщину</li>
+                        <li><strong>Медицинский контроль:</strong> Регулярные осмотры на венерические заболевания</li>
+                    </ul>
+
+                    <h4>Свидетельства выживших:</h4>
+                    <div class="highlight-box">
+                        <strong>Ким Хаксун</strong> (Корея): "Мне было 17 лет, когда меня обманом заставили стать "женщиной для утешения". Мы жили в ужасных условиях, подвергались постоянному насилию..."
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Три аллы войны</h3>
+                <div class="article-content">
+                    <p>Японская армия проводила политику "трех всех" (三光作戦) на оккупированных территориях:</p>
+
+                    <div class="grid-3">
+                        <div class="card">
+                            <h4>Убивай всех</h4>
+                            <p>Массовые казни гражданского населения в районах партизанской активности</p>
+                        </div>
+                        <div class="card">
+                            <h4>Сжигай все</h4>
+                            <p>Тактика выжженной земли для лишения партизан поддержки</p>
+                        </div>
+                        <div class="card">
+                            <h4>Грабь все</h4>
+                            <p>Систематическое разграбление ресурсов оккупированных территорий</p>
+                        </div>
+                    </div>
+
+                    <h4>Известные операции:</h4>
+                    <ul>
+                        <li><strong>Операция "Уничтожение зоны":</strong> Северный Китай, 1941-1942</li>
+                        <li><strong>Битва за Чанша:</strong> Массовые убийства гражданских</li>
+                        <li><strong>Кампания в Маньчжурии:</strong> Уничтожение целых деревень</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Принудительный труд</h3>
+                <div class="article-content">
+                    <p>Массовое использование принудительного труда китайских и корейских гражданских лиц.</p>
+
+                    <h4>Основные направления:</h4>
+                    <ul>
+                        <li><strong>Строительство:</strong> Дороги, железные дороги, укрепления</li>
+                        <li><strong>Промышленность:</strong> Шахты, заводы, верфи</li>
+                        <li><strong>Сельское хозяйство:</strong> Принудительные работы на полях</li>
+                    </ul>
+
+                    <h4>Масштабы:</h4>
+                    <div class="grid-2">
+                        <div class="card">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">млн китайских рабочих</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">млн корейских рабочих</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Международные процессы и признания</h3>
+                <div class="article-content">
+                    <h4>Токийский процесс (1946-1948)</h4>
+                    <ul>
+                        <li><strong>Продолжительность:</strong> 2.5 года (май 1946 - ноябрь 1948)</li>
+                        <li><strong>Обвиняемые:</strong> 28 высших японских руководителей</li>
+                        <li><strong>Приговоры:</strong> 7 смертных казней, 16 пожизненных заключений</li>
+                        <li><strong>Преступления:</strong> Преступления против мир, военные преступления, преступления против человечности</li>
+                    </ul>
+
+                    <h4>Проблема признания и извинений:</h4>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Официальные извинения</h4>
+                            <p>1993 - Заявление Коно о "женщинах для утешения"<br>
+                            1995 - Заявление Мураямы о "глубоком раскаянии"</p>
+                        </div>
+                        <div class="card">
+                            <h4>Споры и отрицание</h4>
+                            <p>Некоторые японские политики и историки продолжают оспаривать масштабы преступлений</p>
+                        </div>
+                    </div>
+
+                    <h4>Компенсации жертвам:</h4>
+                    <ul>
+                        <li>Азиатский женский фонд (1995) - частные компенсации</li>
+                        <li>Отдельные судебные иски в Японии и других странах</li>
+                        <li>Продолжающаяся борьба за официальные репарации</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Историческое значение и память</h3>
+                <div class="article-content">
+                    <h4>Мемориалы и музеи:</h4>
+                    <ul>
+                        <li><strong>Мемориальный зал жертв Нанкинской резни:</strong> Нанкин, Китай</li>
+                        <li><strong>Музей военных преступлений Отряда 731:</strong> Харбин, Китай</li>
+                        <li><strong>Музей сексуального рабства:</strong> Сеул, Южная Корея</li>
+                    </ul>
+
+                    <h4>Современные последствия:</h4>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Международные отношения</h4>
+                            <p>Преступления продолжают влиять на отношения между Японией и странами Восточной Азии</p>
+                        </div>
+                        <div class="card">
+                            <h4>Историческая память</h4>
+                            <p>Разные подходы к преподаванию этих событий в учебниках разных стран</p>
+                        </div>
+                    </div>
+
+                    <div class="quote">
+                        "Только признавая ошибки прошлого, мы можем построить лучшее будущее. Память о жертвах должна сохраняться как предостережение для будущих поколений."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Личные истории и свидетельства - РАСШИРЕННАЯ ВЕРСИЯ -->
+        <section id="stories" class="section">
+            <h2>Личные истории и свидетельства</h2>
+            <p>За сухими цифрами статистики и стратегическими картами скрываются судьбы миллионов людей. В этом разделе мы собрали голоса тех, кто пережил войну: солдат, мирных жителей, женщин и детей. Эти истории — живая память о мужестве, страданиях и надежде.</p>
+
+            <div class="news-article">
+                <h3>Солдатские дневники: Взгляд из окопов</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Дневник лейтенанта Ямада Такэси</h4>
+                            <p><strong>(Японская императорская армия, 16-я дивизия)</strong></p>
+                            <div class="highlight-box">
+                                <em>"25 декабря 1937 года, окрестности Нанкина. Сегодня наш отряд расстрелял около 300 пленных... Командир сказал, что это необходимо, чтобы не оставлять врага в тылу. Я больше не могу есть. Руки дрожат. Во имя Императора мы превращаемся в демонов. Мать, прости меня."</em>
+                            </div>
+                            <p><strong>Судьба:</strong> Ямада был убит в 1939 году во время битвы за Чанша. Его дневник был найден и отправлен семье после войны.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Воспоминания сержанта Ли Вэйминя</h4>
+                            <p><strong>(Национально-революционная армия, 88-я дивизия)</strong></p>
+                            <div class="highlight-box">
+                                <em>"Оборона Шанхая, октябрь 1937. Мы отступали по улицам, превращенным в руины. Товарищи падали один за одним. Мы три дня не ели, пили воду из луж. Помню мальчика, лет десяти, который принес нам вязанку батата. Его застрелил снайпер. Мы так и не узнали его имени. Мы сражались за него, за всех, кто не должен был этого видеть."</em>
+                            </div>
+                            <p><strong>Судьба:</strong> Ли Вэйминь пережил войну, стал учителем истории в Нанкине. Умер в 2001 году.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Голоса мирных жителей: Цена выживания</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Сяо Фэн, ребёнок войны (Нанкин)</h4>
+                            <p><strong>"Я спрятался в колодце"</strong></p>
+                            <div class="highlight-box">
+                                <em>"Мне было 8 лет. Мы с сестрой прятались в сухом колодце, когда в наш дом ворвались японские солдаты. Сверху мы слышали крики матери, потом выстрел. Мы просидели там два дня, боясь пошевелиться. Нас нашёл сосед, когда всё стихло. Мать лежала на полу... Отца мы больше никогда не видели."</em>
+                            </div>
+                            <p><strong>Судьба:</strong> Сяо Фэн и его сестру вырастила бабушка. Он стал одним из основателей мемориального зала жертв Нанкинской резни.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Анна Петрова, русская эмигрантка (Харбин)</h4>
+                            <p><strong>"Между молотом и наковальней"</strong></p>
+                            <div class="highlight-box">
+                                <em>"Харбин был нашим домом, но с приходом Квантунской армии всё изменилось. Подозревали всех: и русских, и китайцев. Ночью забирали людей. Мы жили в постоянном страхе. Помню, как японские офицеры requisitioned нашу квартиру, а нас выселили в холодный сарай. Мы выжили только благодаря помощи китайских соседей, которые тайком подкидывали нам еду."</em>
+                            </div>
+                            <p><strong>Судьба:</strong> После войны Анна с семьей эмигрировала в Австралию.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Свидетельства иностранцев: Взгляд со стороны</h3>
+                <div class="article-content">
+                    <h4>Джон Рабе: "Хороший нацист Нанкина"</h4>
+                    <p>Немецкий бизнесмен и член НСДАП, возглавивший Международный комитет безопасности Нанкина и спасший более 200 000 китайцев.</p>
+                    <div class="highlight-box">
+                        <em>Из дневника, 19 декабря 1937: "Трупы повсюду. Я видел, как солдаты закололи штыками грудного ребенка, которого несла его мать... Я постоянно показываю свою свастическую повязку, и это пока действует. Но я один, а их тысячи. Это ад на земле, и мы бессильны остановить его."</em>
+                    </div>
+
+                    <h4>Минни Вотрин: Ангел Гинлинга</h4>
+                    <p>Американская преподавательница, руководившая женским колледжем в Нанкине, который стал убежищем для 10 000 женщин и детей.</p>
+                    <div class="highlight-box">
+                        <em>Из письма: "Они врываются в кампус почти каждый день, ищут женщин. Мы ставим кровати баррикадами, умоляем, плачем. Вчера я встала на колени перед офицером, чтобы он не забирал 15-летнюю девочку. Он ударил меня прикладом, но ушел. Это маленькая победа в море поражений. Я не сплю уже третью ночь."</em>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Документы и архивы - РАСШИРЕННАЯ ВЕРСИЯ -->
+        <section id="documents" class="section">
+            <h2>Документы и архивы</h2>
+            <p>Этот раздел представляет собой документальную основу истории. Здесь собраны официальные приказы, дипломатическая переписка, карты, фотографии и другие архивные материалы, которые являются неоспоримыми свидетельствами событий 1937-1945 годов.</p>
+
+            <div class="news-article">
+                <h3>Ключевые официальные документы</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Японские императорские указы</h4>
+                            <ul>
+                                <li><strong>Императорский рескрипт № 251</strong> (1937) — Об объявлении войны Китайской Республике.</li>
+                                <li><strong>Директива Ставки № 575</strong> — "Политика обращения с военнопленными" (фактически санкционировавшая жестокое обращение).</li>
+                                <li><strong>Приказ о создании "Отряда 731"</strong> — Секретный приказ военного министра.</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <strong>Значение:</strong> Эти документы доказывают, что многие преступления были санкционированы на высшем государственном и военном уровне.
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h4>Дипломатическая переписка и протесты</h4>
+                            <ul>
+                                <li><strong>Ноты протеста правительства Китая</strong> в Лигу Наций (1937-1938).</li>
+                                <li><strong>Донесения иностранных дипломатов</strong> (например, американского посла Джозефа Грю) о зверствах японской армии.</li>
+                                <li><strong>Отчеты Международного комитета безопасности Нанкина</strong>, направленные в японское посольство.</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <strong>Значение:</strong> Показывают, что мировая общественность была осведомлена о преступлениях практически в реальном времени.
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Акт о капитуляции Японии (1945)</h4>
+                    <p>Ключевой документ, завершивший Вторую мировую войну. В разделе представлена факсимильная копия с переводом.</p>
+                    <div class="highlight-box" style="text-align: center;">
+                        <em>"...мы настоящим заявляем о безоговорочной капитуляции Союзным державам Императорского Генерального Штаба Японии, всех японских вооруженных сил и всех вооруженных сил под японским контролем независимо от того, где они находятся."</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Фотодокументы и кинохроника</h3>
+                <div class="article-content">
+                    <p>Фотографии и видео являются одними из самых мощных свидетельств ужасов войны.</p>
+
+                    <h4>Знаменитые фотографии</h4>
+                    <div class="grid-3">
+                        <div class="card">
+                            <h5>Ребёнок на вокзале в Шанхае</h5>
+                            <div class="card-image">
+                                <img src="https://avatars.mds.yandex.net/i?id=477afa4b1d7f1bbfcaba62edd9154a12_l-5888941-images-thumbs&n=13" alt="Ребёнок на вокзале в Шанхае" loading="lazy">
+                            </div>
+                            <p>(1937) — Известный снимок плачущего китайского младенца на разбомбленном вокзале, сделанный фотокорреспондентом Х. С. "Ньюсом" Вонгом.</p>
+                        </div>
+                        <div class="card">
+                            <h5>Нанкинская резня</h5>
+                            <div class="card-image">
+                                <img src="https://avatars.mds.yandex.net/i?id=ed179de5ade577e714f5c8f579406d9e_l-5526520-images-thumbs&n=13" alt="Падение Нанкина" loading="lazy">
+                            </div>
+                            <p>(Декабрь 1937) — Один из самых кровавых эпизодов Нанкинской резни произошел 18 декабря на берегу Янцзы, когда за час японцы расстреляли около 57,5 тыс. китайских пленных. Тела погибших сбрасывались прямо в реку</p>
+                        </div>
+                        <div class="card">
+                            <h5>Строительство Бирманской дороги</h5>
+                            <div class="card-image">
+                                <img src="https://content.onliner.by/news/2016/02/default/28f7e3e24fa2443aa3a35c4f10544ea7.jpg" alt="Строительство Бирманской дороги" loading="lazy">
+                            </div>
+                            <p>— Кадры тысяч китайских рабочих, вручную строивших "Дорогу жизни" через горы и джунгли.</p>
+                        </div>
+                    </div>
+               
+                    <h4>Кинохроника и документальные кадры</h4>
+                    <ul>
+                        <li><strong>Японская пропагандистская кинохроника</strong> "Нихон Ньюс": Показывает официальную версию событий, но иногда невольно фиксирует реальность.</li>
+                        <li><strong>Американская кинохроника</strong> (The March of Time, Universal Newsreel): Освещала войну с прокитайских позиций.</li>
+                        <li><strong>Кадры, снятые Джоном Маги</strong> — Секретная съемка последствий бомбардировки Чунцина.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Карты и оперативные планы</h3>
+                <div class="article-content">
+                    <p>Визуализация стратегии и тактики сторон.</p>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Японские оперативные карты</h4>
+                            <ul>
+                                <li>Карта наступления на Ухань (1938).</li>
+                                <li>Схема операции "Ити-Го" (1944).</li>
+                                <li>Карты дислокации "Отряда 731" и его подразделений.</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4>Китайские и союзнические карты</h4>
+                            <ul>
+                                <li>Карты оборонительных рубежей под Шанхаем.</li>
+                                <li>Схемы маршрутов эвакуации заводов и университетов на запад.</li>
+                                <li>Карты Бирманской дороги и "Воздушного моста" через Гималаи.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Личные документы и артефакты</h3>
+                <div class="article-content">
+                    <p>Эти вещи делают историю осязаемой.</p>
+                    <div class="grid-3">
+                        <div class="card">
+                            <h4>Письма с фронта</h4>
+                            <p>Трогательные и часто трагические послания солдат своим семьям. Многие из них так и не были доставлены.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Пропагандистские листовки</h4>
+                            <p>Как японские (призывающие к сдаче в плен), так и китайские (поднимающие боевой дух).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Военные билеты и награды</h4>
+                            <p>Личные вещи солдат, рассказывающие об их боевом пути.</p>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <strong>Пример:</strong> Письмо японского солдата: "<em>Дорогая сестра, сегодня мы вошли в китайскую деревню. Жителей не было. Командир приказал сжечь её дотла. Иногда я не понимаю, зачем мы это делаем. Скоро, наверное, я перестану чувствовать что-либо вообще.</em>"
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Материалы Токийского трибунала</h3>
+                <div class="article-content">
+                    <p>Сборник доказательств, представленных на Международном военном трибунале для Дальнего Востока.</p>
+                    <ul>
+                        <li><strong>Стенограммы заседаний</strong> с показаниями выживших и обвиняемых.</li>
+                        <li><strong>Экспертные заключения</strong> по оценке масштабов военных преступлений.</li>
+                        <li><strong>Фотографии и документы</strong>, приобщенные к делу в качестве вещественных доказательств.</li>
+                        <li><strong>Официальный обвинительный акт</strong> и приговор.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="quote">
+                <p>Документы не горят. Они продолжают говорить с нами через десятилетия, напоминая о прошлом и предостерегая будущее.</p>
+                <p style="margin-top: 1rem;"><strong>Источники:</strong> Национальный архив Китая, Японский центр азиатских исторических записей, Архив Гувера, Библиотека Конгресса США.</p>
+            </div>
+        </section>
+
+        <!-- Последствия и влияние - РАСШИРЕННАЯ ВЕРСИЯ -->
+        <section id="consequences" class="section">
+            <h2>Влияние и последствия войны</h2>
+            <p>Вторая японо-китайская война стала поворотным моментом в истории Восточной Азии, оказав profound влияние на судьбы Китая, Японии и всего мирового порядка. Её последствия ощущаются до сих пор в политике, экономике и международных отношениях региона.</p>
+
+            <div class="news-article">
+                <h3>Непосредственные итоги войны</h3>
+                <div class="article-content">
+                    <div class="grid-3">
+                        <div class="card">
+                            <span class="stat-number">15-20</span>
+                            <span class="stat-label">миллионов погибших в Китае</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">2-3</span>
+                            <span class="stat-label">миллионов погибших в Японии</span>
+                        </div>
+                        <div class="card">
+                            <span class="stat-number">95 процентов</span>
+                            <span class="stat-label">промышленности Китая разрушено</span>
+                        </div>
+                    </div>
+
+                    <h4>Ключевые результаты:</h4>
+                    <ul>
+                        <li><strong>Военная капитуляция Японии</strong> и освобождение всех оккупированных территорий</li>
+                        <li><strong>Возвращение Тайваня и Пэнху</strong> под китайский суверенитет</li>
+                        <li><strong>Ликвидация японской колониальной империи</strong> и марионеточных государств</li>
+                        <li><strong>Массовые репатриации</strong> японских военных и гражданских лиц из Китая</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Влияние на стран-участниц</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Китай: Цена победы и новая реальность</h4>
+                            <p><strong>Демографические последствия:</strong></p>
+                            <ul>
+                                <li>Потеря 15-20 миллионов человек (2-4% населения)</li>
+                                <li>Массовые перемещения населения (более 60 миллионов беженцев)</li>
+                                <li>Демографический дисбаланс из-за гибели мужского населения</li>
+                            </ul>
+                            <p><strong>Экономическое опустошение:</strong></p>
+                            <ul>
+                                <li>Разрушение 95% современной промышленности</li>
+                                <li>Уничтожение транспортной инфраструктуры</li>
+                                <li>Гиперинфляция и крах финансовой системы</li>
+                                <li>Потеря сельскохозяйственных угодий</li>
+                            </ul>
+                            <p><strong>Политические изменения:</strong></p>
+                            <ul>
+                                <li>Рост авторитета Коммунистической партии Китаа</li>
+                                <li>Ослабление правительства Гоминьдана</li>
+                                <li>Зарождение гражданской войны (1946-1949)</li>
+                                <li>Формирование современной китайской национальной идентичности</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4>Япония: Крах империи и возрождение</h4>
+                            <p><strong>Потери и разрушения:</strong></p>
+                            <ul>
+                                <li>Гибель 2-3 миллионов человек (военные и гражданские)</li>
+                                <li>Потеря всего заморского имущества и инвестиций</li>
+                                <li>Экономическая разруха и голод</li>
+                            </ul>
+                            <p><strong>Политическая трансформация:</strong></p>
+                            <ul>
+                                <li>Американская оккупация (1945-1952)</li>
+                                <li>Принятие пацифистской конституции (1947)</li>
+                                <li>Ликвидация императорской армии и флота</li>
+                                <li>Демилитаризация и демократизация</li>
+                                <li>Судебные процессы над военными преступниками</li>
+                            </ul>
+                            <p><strong>Социальные последствия:</strong></p>
+                            <ul>
+                                <li>Коллективная травма и переосмысление национальной идентичности</li>
+                                <li>Потеря статуса великой державы</li>
+                                <li>Экономическое "чудо" 1960-х годов как ответ на разруху</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Международная реакция и участие</h3>
+                <div class="article-content">
+                    <div class="grid-3">
+                        <div class="card">
+                            <h4>Лига Наций</h4>
+                            <p><strong>Реакция:</strong> Осуждение японской агрессии, но отсутствие реальных действий</p>
+                            <p><strong>Значение:</strong> Продемонстрировала неэффективность международных институтов в предотвращении агрессии</p>
+                            <p><strong>Ключевые резолюции:</strong> Резолюция 1938 года с призывом к прекращению боевых действий</p>
+                        </div>
+                        <div class="card">
+                            <h4>США</h4>
+                            <p><strong>Эволюция позиции:</strong> От изоляционизма к активной поддержке Китая</p>
+                            <p><strong>Меры:</strong> Эмбарго на поставки нефти (1941), программа ленд-лиза</p>
+                            <p><strong>Военная помощь:</strong> Добровольцы "Летающие тигры", военные советники</p>
+                        </div>
+                        <div class="card">
+                            <h4>СССР</h4>
+                            <p><strong>Поддержка Китая:</strong> Военные поставки, кредиты, военные советники</p>
+                            <p><strong>Конфликты:</strong> Бои на озере Хасан (1938), Халхин-Гол (1939)</p>
+                            <p><strong>Завершающая роль:</strong> Маньчжурская операция (август 1945)</p>
+                        </div>
+                        <div class="card">
+                            <h4>Великобритания</h4>
+                            <p><strong>Позиция:</strong> Ограниченная поддержка Китая из-за европейского театра</p>
+                            <p><strong>Участие:</strong> Поддержка Бирманской дороги, военные советники</p>
+                        </div>
+                        <div class="card">
+                            <h4>Германия</h4>
+                            <p><strong>Изменение позиции:</strong> От военного сотрудничества с Китаем к союзу с Японией</p>
+                            <p><strong>Результат:</strong> Разрыв отношений с Китаем в 1941 году</p>
+                        </div>
+                        <div class="card">
+                            <h4>Страны Азии</h4>
+                            <p><strong>Разделенные позиции:</strong> От поддержки Японии (Таиланд) до сопротивления (Корея)</p>
+                            <p><strong>Колониальный контекст:</strong> Война ускорила процесс деколонизации</p>
+                        </div>
+                    </div>
+
+                    <h4>Дипломатические инициативы:</h4>
+                    <ul>
+                        <li><strong>Конференция в Брюсселе (1937):</strong> Попытка мирного урегулирования</li>
+                        <li><strong>Договор о ненападении СССР с Японией (1941):</strong> Обеспечение безопасности восточных границ</li>
+                        <li><strong>Каирская декларация (1943):</strong> Определение послевоенных границ в Азии</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Послевоенные изменения в регионе</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Распад колониальной системы</h4>
+                            <p>Война значительно ослабила европейские колониальные державы и ускорила процесс деколонизации в Азии.</p>
+                            <ul>
+                                <li><strong>Корея:</strong> Освобождение от японского контроля (1945), разделение на Север и Юг</li>
+                                <li><strong>Вьетнам:</strong> Провозглашение независимости (1945), начало Индокитайской войны</li>
+                                <li><strong>Индонезия:</strong> Провозглашение независимости (1945)</li>
+                                <li><strong>Индия:</strong> Получение независимости (1947)</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4>Формирование новой системы безопасности</h4>
+                            <p>Создание новых военно-политических союзов и перераспределение сфер влияния.</p>
+                            <ul>
+                                <li><strong>Американское военное присутствие:</strong> Оккупация Японии, базы на Тайване, Филиппинах</li>
+                                <li><strong>Советское влияние:</strong> Северная Корея, Маньчжурия, поддержка китайских коммунистов</li>
+                                <li><strong>АНЗЮС (1951):</strong> Военный союз Австралии, Новой Зеландии и США</li>
+                                <li><strong>СЕАТО (1954):</strong> Организация договора Юго-Восточной Азии</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>Территориальные изменения:</h4>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Территория</th>
+                                <th>Довоенный статус</th>
+                                <th>Послевоенный статус</th>
+                                <th>Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Тайвань</td>
+                                <td>Японская колония</td>
+                                <td>Возвращение Китаю</td>
+                                <td>Источник современных китайско-японских и китайско-американских противоречий</td>
+                            </tr>
+                            <tr>
+                                <td>Маньчжурия</td>
+                                <td>Государство Маньчжоу-го</td>
+                                <td>Возвращение Китаю</td>
+                                <td>Стала промышленным центром КНР</td>
+                            </tr>
+                            <tr>
+                                <td>Корея</td>
+                                <td>Японская колония</td>
+                                <td>Разделена на Север и Юг</td>
+                                <td>Причина Корейской войны и продолжающегося конфликта</td>
+                            </tr>
+                            <tr>
+                                <td>Южный Сахалин</td>
+                                <td>Японская территория</td>
+                                <td>Передача СССР</td>
+                                <td>Усиление советского влияния в регионе</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <h3>Долгосрочные последствия и современное значение</h3>
+                <div class="article-content">
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4>Политическое наследие</h4>
+                            <ul>
+                                <li><strong>Китайско-японские отношения:</strong> Нерешенные исторические вопросы продолжают влиять на отношения</li>
+                                <li><strong>Тайваньский вопрос:</strong> Война заложила основу для современного статуса Тайваня</li>
+                                <li><strong>Территориальные споры:</strong> Споры вокруг островов в Восточно-Китайском море</li>
+                                <li><strong>Память и историческая политика:</strong> Разные подходы к коммеморации войны</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4>Экономические последствия</h4>
+                            <ul>
+                                <li><strong>Японское экономическое чудо:</strong> Частично как реакция на послевоенную разруху</li>
+                                <li><strong>Китайская экономическая трансформация:</strong> Индустриализация 1950-х на основе восстановленной промышленности</li>
+                                <li><strong>Региональная экономическая интеграция:</strong> Несмотря на политические разногласия</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>Правовое и гуманитарное наследие:</h4>
+                    <ul>
+                        <li><strong>Развитие международного гуманитарного права:</strong> Прецеденты Токийского процесса</li>
+                        <li><strong>Проблема компенсаций:</strong> Продолжающиеся споры о репарациях жертвам военных преступлений</li>
+                        <li><strong>Исторические споры:</strong> Разные трактовки событий войны в учебниках и публичном дискурсе</li>
+                    </ul>
+
+                    <div class="quote">
+                        "Вторая японо-китайская война не закончилась в 1945 году. Её эхо продолжает звучать в современных политических дебатах, экономических отношениях и культурной памяти народов Восточной Азии, напоминая о том, что прошлое никогда не остается полностью в прошлом."
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>Современные вызовы:</strong> Наследие войны продолжает влиять на региональную безопасность, экономическое сотрудничество и культурный обмен. Понимание этих исторических корней необходимо для построения стабильного будущего в Восточной Азии.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О проекте</h3>
+                    <p>Образовательный ресурс, посвященный истории Второй японо-китайской войны 1937-1945 годов.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: litritus24@gmail.com</p>
+                    <p>Телефон: +7 (953) 520-64-97</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ресурсы</h3>
+                    <ul>
+                        <li><a href="#">Архивные материалы</a></li>
+                        <li><a href="#">Библиография</a></li>
+                        <li><a href="#">Исследования</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Архив Второй японо-китайской войны. Все права защищены.</p>
+                <p>Образовательный ресурс | Историческая память</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Функции для управления каруселью
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) {
+            // Скрыть все слайды
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Корректировка индекса для циклической прокрутки
+            if (index >= slides.length) currentSlideIndex = 0;
+            if (index < 0) currentSlideIndex = slides.length - 1;
+            
+            // Показать текущий слайд
+            slides[currentSlideIndex].classList.add('active');
+            indicators[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Автоматическая прокрутка (опционально)
+        let slideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // Остановка автоматической прокрутки при наведении
+        document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        // Возобновление автоматической прокрутки при уходе курсора
+        document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        });
+
+        // Инициализация
+        showSlide(currentSlideIndex);
+
+        // Плавная навигация
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Анимация появления элементов
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Применяем анимацию к секциям и карточкам
+        document.querySelectorAll('.section, .card, .timeline-item, .news-article').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+
+        // Обработка временной шкалы
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item, index) => {
+            item.style.transitionDelay = `${index * 0.2}s`;
+        });
+
+        // Статистика счетчиков
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.textContent);
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    stat.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    stat.textContent = Math.floor(current);
+                }
+            }, 20);
+        });
+    </script>
+</body>
+</html>
